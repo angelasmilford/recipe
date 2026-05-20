@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './shopping-list.html',
   styles: ``,
 })
-export class ShoppingList {}
+export class ShoppingList {
+  ingredients = [];
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
