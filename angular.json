@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "cms": {
+    "recipe": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -68,10 +68,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cms:build:production"
+              "buildTarget": "recipe:build:production"
             },
             "development": {
-              "buildTarget": "cms:build:development"
+              "buildTarget": "recipe:build:development"
             }
           },
           "defaultConfiguration": "development"
