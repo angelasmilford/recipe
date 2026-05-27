@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Recipe } from '../../recipes/recipe.model';
 
 @Component({
   selector: 'app-recipe-item',
@@ -6,4 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './recipe-item.html',
   styles: ``,
 })
-export class RecipeItem {}
+export class RecipeItem {
+  @Input() recipe: Recipe; 
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
+}
