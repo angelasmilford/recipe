@@ -10,10 +10,11 @@ import { RecipeDetail } from './recipes/recipe-detail/recipe-detail';
 import { RecipeItem } from './recipes/recipe-item/recipe-item';
 import { ShoppingList } from './shopping-list/shopping-list';
 import { ShoppingEdit } from './shopping-list/shopping-edit/shopping-edit';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [App, Recipes, RecipeList, RecipeDetail, RecipeItem, ShoppingList, ShoppingEdit],
-  imports: [BrowserModule, Header, FormsModule],
+  imports: [BrowserModule, Header, FormsModule, DropdownDirective],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
