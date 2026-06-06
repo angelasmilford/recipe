@@ -1,13 +1,35 @@
 import { EventEmitter } from '@angular/core';
 
 import { Recipe } from './recipe.model';
+import { Ingredient } from '../shared/ingredient.model';
 
 export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
 
     private recipes: Recipe[] = [
-        new Recipe('A Test Recipe', 'This is simply a test', 'https://assets.heartfoundation.org.nz/images/all-shared-sections/recipes/cocoa-rice.webp?mtime=1669000875'),
-        new Recipe('Another Test Recipe', 'This is simply a test', 'https://assets.heartfoundation.org.nz/images/all-shared-sections/recipes/cocoa-rice.webp?mtime=1669000875')
+        new Recipe(
+            'Koko Araisa', 
+            'Samoan Cocoa Rice', 
+            'https://assets.heartfoundation.org.nz/images/all-shared-sections/recipes/cocoa-rice.webp?mtime=1669000875',
+            [
+                new Ingredient('White Rice', 50),
+                new Ingredient('Koko Samoa', 1),
+                new Ingredient('Water', 8),
+                new Ingredient('Coconut milk', 1),
+                new Ingredient('Sugar', 100)
+            ]
+        ),
+        new Recipe(
+            'Roti', 
+            'Fiji Indian Chicken Curry Roti Wrap', 
+            'https://www.polynesia.com/contentassets/b4851aaa304f4318b5fd095798fef4b5/easy-to-grab-and-go-or-tasty-enough-for-a-sit-down-meal.webp',
+            [
+                new Ingredient('Flour', 2),
+                new Ingredient('Salt', 1),
+                new Ingredient('Water', 4),
+                new Ingredient('Butter', 6)
+            ]
+        )
     ];
 
     getRecipes() {
