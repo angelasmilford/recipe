@@ -13,8 +13,8 @@ import { ShoppingEdit } from './shopping-list/shopping-edit/shopping-edit';
 import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
-  declarations: [App, Recipes, RecipeList, RecipeDetail, RecipeItem, ShoppingList, ShoppingEdit],
-  imports: [BrowserModule, Header, FormsModule, DropdownDirective],
+  declarations: [App, Header, Recipes, RecipeList, RecipeDetail, RecipeItem, ShoppingList, ShoppingEdit],
+  imports: [BrowserModule, FormsModule, DropdownDirective],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
