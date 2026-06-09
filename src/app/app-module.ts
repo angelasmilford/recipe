@@ -13,9 +13,20 @@ import { ShoppingEdit } from './shopping-list/shopping-edit/shopping-edit';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeStart } from './recipes/recipe-start/recipe-start';
 
 @NgModule({
-  declarations: [App, Header, Recipes, RecipeList, RecipeDetail, RecipeItem, ShoppingList, ShoppingEdit],
+  declarations: [
+    App,
+    Header,
+    Recipes,
+    RecipeList,
+    RecipeDetail,
+    RecipeItem,
+    ShoppingList,
+    ShoppingEdit,
+    RecipeStart,
+  ],
   imports: [BrowserModule, FormsModule, DropdownDirective, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), ShoppingListService],
   bootstrap: [App],
