@@ -11,6 +11,8 @@ import { Recipe } from '../../recipe.model';
 export class RecipeItem {
   @Input() recipe: Recipe; 
 
+  @Input() index: number;
+
   ngOnInit() {
 
   }
