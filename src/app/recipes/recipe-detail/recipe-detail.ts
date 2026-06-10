@@ -21,7 +21,7 @@ export class RecipeDetail {
 
   ngOnInit() {
     this.route.params
-      .subscribe(
+      .subscribe( // will need to be cleaned up
         (params: Params) => {
           this.id = +params['id'];
           this.recipe = this.recipeService.getRecipe(this.id);

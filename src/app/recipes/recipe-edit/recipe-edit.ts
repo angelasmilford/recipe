@@ -15,7 +15,7 @@ export class RecipeEdit {
 
   ngOnInit() {
     this.route.params
-      .subscribe(
+      .subscribe( // will need to be cleaned up
         (params: Params) => {
           this.id = +params['id'];
           this.editMode = params['id'] != null;
