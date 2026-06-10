@@ -14,8 +14,8 @@ export class RecipeList {
   recipes: Recipe[];
 
   constructor(private recipeService: RecipeService,
-    private router: Router,
-    private route: ActivatedRoute
+              private router: Router,
+              private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
