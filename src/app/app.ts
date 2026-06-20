@@ -7,11 +7,4 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('cms');
-
-  loadedFeature = 'recipe';
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
 }
