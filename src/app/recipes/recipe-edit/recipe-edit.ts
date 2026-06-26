@@ -50,7 +50,7 @@ export class RecipeEdit {
     let recipeName = '';
     let recipeImagePath = '';
     let recipeDescription = '';
-    let recipeIngredients = new FormArray<FormGroup>([]);
+    let recipeIngredients = new FormArray([]);
 
     if(this.editMode) {
       const recipe = this.recipeService.getRecipe(this.id);
@@ -80,7 +80,7 @@ export class RecipeEdit {
     });
   }
 
-  get controls() {
-    return (this.recipeForm.get('ingredients') as FormArray).controls;
+  get controls() { // getter
+    return (<FormArray>this.recipeForm.get('ingredients')).controls;
   }
 }
