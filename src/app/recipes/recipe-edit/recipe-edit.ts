@@ -60,7 +60,8 @@ export class RecipeEdit {
   }
 
   onDeleteIngredient(index: number) {
-    (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+    // (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+    (<FormArray> this.recipeForm.get('ingredients')).clear();
   }
 
   onCancel() {
