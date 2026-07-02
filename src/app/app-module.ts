@@ -1,6 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { App } from './app';
 import { Header } from './header/header';
@@ -30,7 +31,14 @@ import { RecipeService } from './recipes/recipe.service';
     RecipeStart,
     RecipeEdit,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, DropdownDirective, AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    FormsModule, 
+    ReactiveFormsModule, 
+    DropdownDirective, 
+    HttpClientModule, 
+    AppRoutingModule
+  ],
   providers: [provideBrowserGlobalErrorListeners(), ShoppingListService, RecipeService],
   bootstrap: [App],
 })
