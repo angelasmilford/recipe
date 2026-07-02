@@ -14,6 +14,6 @@ export class Header {
     }
 
     onFetchData() {
-        this.dataStorageService.fetchRecipes();
+        this.dataStorageService.fetchRecipes().unsubscribe();
     }
 }
